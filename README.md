@@ -8,7 +8,20 @@
 
 ## 🔍 About
 
-TODO
+[Supabase](http://supabase.com?utm_source=egghead&utm_campaign=remix) is a collection of open-source tools that wrap around a PostgreSQL database. In this course, we look at building a realtime chat application with Remix, using Supabase for db hosting, authentication, authorization and subscribe to realtime db events - updating the UI as the database changes.
+
+We will learn about:
+
+- loaders and actions in Remix
+- querying and mutating data with Supabase
+- authentication with GitHub
+- authorization with RLS
+- merging client and server state with realtime events
+- deploying a Remix app to Vercel
+
+This course is 100% TypeScript, however, don't stress if you don't have any experience with TS, as Supabase does most of the heavy lifting here! 🎉
+
+Check out the [Extensions section](./11-deploy-remix-app-to-vercel/README.md) for ideas of how you can continue your learning journey after this course.
 
 ## 🎓 Instructor
 
@@ -20,14 +33,14 @@ Follow Jon Meyers on [Twitter](https://twitter.com/jonmeyers_io) and subscribe t
 
 ## 🗺 Table of Contents
 
-01. [Create Supabase project](/01-create-supabase-project/README.md)
-02. [Create Remix application](/02-create-remix-application/README.md)
-03. [Query Supabase data with Remix Loaders](/03-query-supabase-data-with-remix-loaders/README.md)
-04. [Generate TypeScript types from Supabase CLI](/04-generate-typescript-types-from-supabase-cli/README.md)
-05. [Implement Supabase Auth using GitHub](/05-implement-supabase-auth-using-github/README.md)
-06. [Restrict access with RLS policies](/06-restrict-access-with-rls-policies/README.md)
-07. [Automatically set session cookie with Supabase Auth Helpers](/07-automatically-set-session-cookie-with-supabase-auth-helpers/README.md)
-08. [Call active Loaders on Supabase Auth state change](/08-call-active-loaders-on-supabase-auth-state-change/README.md)
-09. [Mutate Supabase data with Remix Actions](/09-mutate-supabase-data-with-remix-actions/README.md)
+1.  [Create Supabase project](/01-create-supabase-project/README.md)
+2.  [Create Remix application](/02-create-remix-application/README.md)
+3.  [Query Supabase data with Remix Loaders](/03-query-supabase-data-with-remix-loaders/README.md)
+4.  [Generate TypeScript types from Supabase CLI](/04-generate-typescript-types-from-supabase-cli/README.md)
+5.  [Implement Supabase Auth using GitHub](/05-implement-supabase-auth-using-github/README.md)
+6.  [Restrict access with RLS policies](/06-restrict-access-with-rls-policies/README.md)
+7.  [Automatically set session cookie with Supabase Auth Helpers](/07-automatically-set-session-cookie-with-supabase-auth-helpers/README.md)
+8.  [Call active Loaders on Supabase Auth state change](/08-call-active-loaders-on-supabase-auth-state-change/README.md)
+9.  [Mutate Supabase data with Remix Actions](/09-mutate-supabase-data-with-remix-actions/README.md)
 10. [Subscribe to database changes with Supabase Realtime](/10-subscribe-to-database-changes-with-supabase-realtime/README.md)
 11. [Deploy Remix app to Vercel](/11-deploy-remix-app-to-vercel/README.md)

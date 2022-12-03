@@ -16,19 +16,51 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Supabase Realtime](https://supabase.com/docs/guides/realtime) allow us to subscribe to change events in the database - `insert`, `update` and `delete` - and update the UI dynamically. In this lesson, we [enable `replication` on the `messages` table](https://app.supabase.com/project/_/database/replication) to tell Supabase we want to know about changes to this table.
+
+Additionally, we use the Supabase client to set up a subscription for `insert` events on the `messages` table. This will receive websocket updates from Supabase, which we can handle in a callback function, and merge our server state with realtime updates, to allow our application to dynamically update as new messages are sent.
 
 ## Code Snippets
 
-**TODO**
+**Subscribe to realtime updates**
 
-```js
-TODO
+```tsx
+useEffect(() => {
+  const channel = supabase
+    .channel("*")
+    .on(
+      "postgres_changes",
+      { event: "INSERT", schema: "public", table: "messages" },
+      (payload) => {
+        const newMessage = payload.new as Message;
+
+        if (!messages.find((message) => message.id === newMessage.id)) {
+          setMessages([...messages, newMessage]);
+        }
+      }
+    )
+    .subscribe();
+
+  return () => {
+    supabase.removeChannel(channel);
+  };
+}, [supabase, messages, setMessages]);
 ```
+
+**Enable realtime events on messages table**
+
+```sql
+alter table public.messages
+replica identity full;
+```
+
+> SQL code snippets can be run against your Supabase database by heading over to your project's [SQL Editor](https://app.supabase.com/project/_/sql), pasting them into a new query, and clicking `RUN`.
 
 ## Resources
 
-- [TODO](TODO)
+- [Your project's replication settings](https://app.supabase.com/project/_/database/replication)
+- [Supabase docs - Realtime guide](https://supabase.com/docs/guides/realtime)
+- [Supabase docs - Realtime in JS](https://supabase.com/docs/reference/javascript/subscribe)
 
 ---
 

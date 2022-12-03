@@ -16,19 +16,59 @@
 
 **[📹 Video](TODO)**
 
-TODO
+TypeScript helps us build more robust, maintainable and safe applications. In this lesson, we look at installing the [Supabase CLI](https://supabase.com/docs/reference/cli), and using it to generate type definitions for Supabase.
+
+We can use this to add TypeScript support to our Supabase client, which flows through our entire application - server and client. This means we get in-editor feedback about what we can and can't do with Supabase, helping to discover cool new things, while reducing bugs.
+
+Additionally, we use the `LoaderArgs` type signature for our Loader function, which allows us to infer the return type in our component.
+
+> Note: this does not automatically update with changes to Supabase. You need to manually run this command whenever you change the structure of the database.
 
 ## Code Snippets
 
-**TODO**
+**Generate TypeScript definitions from Supabase**
 
-```js
-TODO
+```bash
+supabase gen types typescript --project-id your-project-id > db_types.ts
+```
+
+**Create typesafe Supabase client**
+
+```tsx
+import { createClient } from "@supabase/supabase-js";
+
+import type { Database } from "db_types";
+
+export default createClient<Database>(
+  process.env.SUPABASE_URL!,
+  process.env.SUPABASE_ANON_KEY!
+);
+```
+
+**Fetch data with end-to-end type defs**
+
+```tsx
+import { useLoaderData } from "@remix-run/react";
+import supabase from "utils/supabase";
+
+import type { LoaderArgs } from "@remix-run/node";
+
+export const loader = async ({}: LoaderArgs) => {
+  const { data } = await supabase.from("messages").select();
+  return { messages: data ?? [] };
+};
+
+export default function Index() {
+  const { messages } = useLoaderData<typeof loader>();
+  return <pre>{JSON.stringify(messages, null, 2)}</pre>;
+}
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase CLI](https://supabase.com/docs/reference/cli)
+- [Supabase TypeScript Support](https://supabase.com/docs/reference/javascript/typescript-support)
+- [Remix decision to infer types](https://github.com/remix-run/remix/blob/main/decisions/0003-infer-types-for-useloaderdata-and-useactiondata-from-loader-and-action-via-generics.md)
 
 ---
 

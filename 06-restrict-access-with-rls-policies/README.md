@@ -16,19 +16,51 @@
 
 **[📹 Video](TODO)**
 
-TODO
+Row Level Security denies all access to the database. Select, insert, update and delete queries will be blocked by default. This allows us to write access policies in the database itself, to allow only what our application needs to function.
+
+In this lesson, we look at adding a `user_id` column to the `messages` table, which has a foreign key relationship to the `auth.users` table - what Supabase uses to manage authentication and sessions.
+
+Additionally, we step through a common migration pattern to use when existing data conflicts with the constraints of a new change in structure - we want each message to belong to a user, but the existing data had no column for `user_id`. This requires a three-step process where we add the column without the `not null` constraint, update the existing data to belong to a user, and then add the `not null` constraint to the `user_id` column.
+
+Lastly, we update our RLS policy to only allow read access to signed in users.
 
 ## Code Snippets
 
-**TODO**
+> SQL code snippets can be run against your Supabase database by heading over to your project's [SQL Editor](https://app.supabase.com/project/_/sql), pasting them into a new query, and clicking `RUN`.
 
-```js
-TODO
+**Add column with not null constraint**
+
+```sql
+alter table public.messages
+add user_id uuid references auth.users not null;
+```
+
+**Add column without not null constraint**
+
+```sql
+alter table public.messages
+add user_id uuid references auth.users;
+```
+
+**Add not null constraint to column**
+
+```sql
+alter table public.messages
+alter column user_id set not null;
+```
+
+**Alter RLS policy to require authenticated user**
+
+```sql
+begin;
+  alter policy "users can read messages" on "public"."messages" rename to "authenticated users can read messages";
+  alter policy "authenticated users can read messages" on "public"."messages" to authenticated;
+commit;
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Implement Row Level Security in Supabase (video)](https://www.youtube.com/watch?v=Ow_Uzedfohk)
 
 ---
 

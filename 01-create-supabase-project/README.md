@@ -16,19 +16,36 @@
 
 **[📹 Video](TODO)**
 
-TODO
+[Supabase](http://supabase.com?utm_source=egghead&utm_campaign=remix) handles hosting a database, authentication, authorization, file storage, realtime, edge functions, database functions, triggers and webhooks - lots of ways to build apps and automate backend stuff.
+
+In this lesson, we head over to [database.new](https://database.new) to create a new Supabase project. Additionally, we use the dashboard to easily create a new table for our `messages`. We talk through some different data types and constraints that can be applied to columns. Lastly, we populate our new table with some example messages.
 
 ## Code Snippets
 
-**TODO**
+> SQL code snippets can be run against your Supabase database by heading over to your project's [SQL Editor](https://app.supabase.com/project/_/sql), pasting them into a new query, and clicking `RUN`.
 
-```js
-TODO
+**Create a messages table**
+
+```sql
+create table if not exists messages (
+  id uuid default uuid_generate_v4() primary key,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  content text not null
+);
+```
+
+**Insert messages**
+
+```sql
+insert into messages(content)
+values
+  ('first message'),
+  ('second message');
 ```
 
 ## Resources
 
-- [TODO](TODO)
+- [Supabase Docs](https://supabase.com/docs)
 
 ---
 

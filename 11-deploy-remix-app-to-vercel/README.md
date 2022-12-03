@@ -16,19 +16,23 @@
 
 **[📹 Video](TODO)**
 
-TODO
+Using a GitHub repo to deploy our application to Vercel, keeps our code and live production site in sync. In this lesson we look at using the [GitHub CLI](https://cli.github.com/) tool to create a public repo, and adding it as a remote origin for our project.
 
-## Code Snippets
+Additionally, we create a new Vercel project from this GitHub repo, add our Supabase environment variables, and deploy. Lastly, we update the Homepage URL in our GitHub OAuth app to be our new Vercel URL, and set our Supabase project's [Authentication Site URL](https://app.supabase.com/project/_/auth/url-configuration) to our new live application URL.
 
-**TODO**
+## Extension ideas
 
-```js
-TODO
-```
+- Style the app using Tailwind CSS (or another method of choice)
+- Implement the ability for a user to `update` and `delete` their own messages
+- Add the option to set a username and display this alongside messages
+- Add separate message threads/chat rooms
+- Implement private messages/chat rooms
 
 ## Resources
 
-- [TODO](TODO)
+- [GitHub CLI](https://cli.github.com/)
+- [Vercel docs](https://vercel.com/docs)
+- [Deploying Remix app to Vercel](https://vercel.com/guides/deploying-remix-with-vercel)
 
 ---
 
