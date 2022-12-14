@@ -14,7 +14,7 @@
 
 # Generate TypeScript types from Supabase CLI
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-generate-typescript-type-definitions-with-the-supabase-cli?af=9qsk0a)**
 
 TypeScript helps us build more robust, maintainable and safe applications. In this lesson, we look at installing the [Supabase CLI](https://supabase.com/docs/reference/cli), and using it to generate type definitions for Supabase.
 

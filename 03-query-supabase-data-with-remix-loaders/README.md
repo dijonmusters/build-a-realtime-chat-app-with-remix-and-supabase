@@ -14,7 +14,7 @@
 
 # Query Supabase data with Remix Loaders
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/remix-query-supabase-data-with-remix-loaders?af=9qsk0a)**
 
 The [supabase-js](https://supabase.com/docs/reference/javascript) package allows us to connect to our Supabase project, and easily query and mutate data. In this lesson, we install `supabase-js`, set up environment variables for `SUPABASE_URL` and `SUPABASE_ANON_KEY`, and create a Supabase client to use across our application.
 

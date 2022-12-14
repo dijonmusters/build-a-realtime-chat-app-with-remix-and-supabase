@@ -14,7 +14,7 @@
 
 # Create Supabase project
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/egghead-create-a-supabase-project-with-a-table-and-example-data?af=9qsk0a)**
 
 [Supabase](http://supabase.com?utm_source=egghead&utm_campaign=remix) handles hosting a database, authentication, authorization, file storage, realtime, edge functions, database functions, triggers and webhooks - lots of ways to build apps and automate backend stuff.
 

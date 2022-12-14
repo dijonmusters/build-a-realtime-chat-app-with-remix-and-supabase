@@ -14,7 +14,7 @@
 
 # Restrict access with RLS policies
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-restrict-access-to-the-messages-table-in-a-database-with-row-level-security-rls-policies?af=9qsk0a)**
 
 Row Level Security denies all access to the database. Select, insert, update and delete queries will be blocked by default. This allows us to write access policies in the database itself, to allow only what our application needs to function.
 

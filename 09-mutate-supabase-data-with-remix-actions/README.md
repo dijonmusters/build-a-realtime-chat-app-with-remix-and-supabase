@@ -14,7 +14,7 @@
 
 # Mutate Supabase data with Remix Actions
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/remix-securely-mutate-supabase-data-with-remix-actions?af=9qsk0a)**
 
 To mutate data in Remix, we use an Action function. In this lesson, we look at creating a Remix `<Form />` to submit the content of a message as a `post` request to our `Action` function.
 

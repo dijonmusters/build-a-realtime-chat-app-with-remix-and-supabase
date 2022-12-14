@@ -14,7 +14,7 @@
 
 # Subscribe to database changes with Supabase Realtime
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/supabase-subscribe-to-database-changes-with-supabase-realtime?af=9qsk0a)**
 
 [Supabase Realtime](https://supabase.com/docs/guides/realtime) allow us to subscribe to change events in the database - `insert`, `update` and `delete` - and update the UI dynamically. In this lesson, we [enable `replication` on the `messages` table](https://app.supabase.com/project/_/database/replication) to tell Supabase we want to know about changes to this table.
 

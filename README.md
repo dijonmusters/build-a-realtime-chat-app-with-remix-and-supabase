@@ -1,10 +1,10 @@
-# [Build a Realtime Chat App with Remix and Supabase](TODO?af=9qsk0a)
+# [Build a Realtime Chat App with Remix and Supabase](https://egghead.io/courses/build-a-realtime-chat-app-with-remix-and-supabase-d36e2618?af=9qsk0a)
 
-<a href="TODO?af=9qsk0a">
-  <img src="TODO?af=9qsk0a" alt="Build a Realtime Chat App with Remix and Supabase" width="100%" />
-</a>
+<!-- <a href="https://egghead.io/courses/build-a-realtime-chat-app-with-remix-and-supabase-d36e2618?af=9qsk0a">
+  <img src="https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Fplaylists%2Fsquare_covers%2F000%2F783%2F263%2Fsquare_480%2FFrame%25281%2529.png&w=1080&q=100" alt="Build a Realtime Chat App with Remix and Supabase" width="100%" />
+</a> -->
 
-> This repo accompanies this [free egghead course](TODO?af=9qsk0a).
+> This repo accompanies this [free egghead course](https://egghead.io/courses/build-a-realtime-chat-app-with-remix-and-supabase-d36e2618?af=9qsk0a).
 
 ## 🔍 About
 

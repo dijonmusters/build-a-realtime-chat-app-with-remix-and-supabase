@@ -14,7 +14,7 @@
 
 # Automatically set session cookie with Supabase Auth Helpers
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/remix-make-cookies-the-user-session-single-source-of-truth-with-supabase-auth-helpers?af=9qsk0a)**
 
 Remix Loaders allow us to fetch data server-side, before rendering a component. This works great if you are implementing your authorization rules for data fetching in the loader function, however, Supabase allows us to use Row Level Security policies to write access policies alongside the data in the database.
 

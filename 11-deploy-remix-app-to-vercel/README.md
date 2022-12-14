@@ -14,7 +14,7 @@
 
 # Deploy Remix app to Vercel
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/remix-deploy-a-remix-application-to-vercel-from-a-github-repository?af=9qsk0a)**
 
 Using a GitHub repo to deploy our application to Vercel, keeps our code and live production site in sync. In this lesson we look at using the [GitHub CLI](https://cli.github.com/) tool to create a public repo, and adding it as a remote origin for our project.
 

@@ -14,7 +14,7 @@
 
 # Call active Loaders on Supabase Auth state change
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/remix-keep-data-in-sync-with-mutations-using-active-remix-loader-functions?af=9qsk0a)**
 
 The OAuth flow is asynchronous. This means we get redirected to the landing page before GitHub and Supabase have decided that you can be trusted! 👍
 

@@ -14,7 +14,7 @@
 
 # Implement Supabase Auth using GitHub
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/github-implement-authentication-for-supabase-with-oauth-and-github?af=9qsk0a)**
 
 Supabase supports [a collection of auth strategies](https://supabase.com/docs/guides/auth) - Email and password, passwordless and OAuth. In this lesson, we look at implementing OAuth with GitHub.
 

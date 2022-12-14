@@ -14,7 +14,7 @@
 
 # Create Remix application
 
-**[📹 Video](TODO)**
+**[📹 Video](https://egghead.io/lessons/remix-setting-up-a-remix-project?af=9qsk0a)**
 
 [Remix](https://remix.run) is a web application framework built on top of React, that gives you sprinkles of server when you need it - fetching data on page load, mutating values in a db etc. In this lesson, we use the `create-remix` package to setup our new app. Additionally, we run the project is development mode with `npm run dev` and update the content on our `index` route.
 
